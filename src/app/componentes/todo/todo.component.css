@@ -1,0 +1,63 @@
+imput{
+    border-color:black ;
+}
+.nav-bar{
+    background-color: #3c0087;
+    color: aliceblue;
+    border-radius: 0 0 10px 10px;
+}
+
+.campo{
+
+    border-color: red;
+}
+.iten{
+    padding-left: 10px;
+}
+ul{
+    display: flex;
+    
+}
+ul li{
+    list-style: none;
+    padding-top: 1rem;
+    
+}
+ul li a{
+    text-decoration: none;
+    color:#fff;
+    font-size: 1.5rem;
+}
+.lab{
+    font-size: 1.5rem;
+}
+input{
+    margin-top: 0.6rem;
+    border: 1px solid black;
+    width: 30rem;
+    height: 3.5rem;
+}
+
+input::placeholder{
+    font-size: 2rem;
+    text-align: center;
+
+}
+.botao-task{
+    background-color: limegreen;
+    width: 5rem;
+    height: 3rem;
+    
+
+}
+.background-containerToDo{
+    border-radius: 10px 10px 0 0 ;
+    background-color: #3c0087;
+    color: #fff;
+    height: 100%;
+}
+.lixeira{
+    border: none;
+    background-color:#fff;
+    
+}
