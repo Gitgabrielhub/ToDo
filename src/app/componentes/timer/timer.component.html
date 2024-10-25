@@ -6,12 +6,13 @@
     </div>
     <div class="row" id="statRow">
       <div class="col-5" id="stats">
-        <h4>{{time}}</h4>
+        <h1>{{ minutes }}</h1>
       </div>
       <div  id="statsPoints">
         <div id="pontos">:</div>
       </div>
       <div class="col-5" id="stats">
+        <h1>{{seconds}}</h1>
         
       </div>
     </div>
@@ -19,7 +20,7 @@
       <div class="row" id="btns">
         <button (click)="start()" class="btn btn-success btn-lg" id="start">start</button>
         <button (click)="pause()" class="btn btn-danger btn-lg" id="stop">stop</button>
-        <button class="btn btn-default btn-lg" id="clear">clear</button>
+        <button (click)="clear()" class="btn btn-default btn-lg" id="clear">clear</button>
       </div>
     </div>
        

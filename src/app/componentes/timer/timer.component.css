@@ -1,6 +1,9 @@
-
-  p {
+  p, h4 {
     text-align: center;
+  }
+  h4{
+    display: flex;
+    justify-content: center;
   }
   .flip-clock-wrapper{
     max-width: 460px;
@@ -62,6 +65,7 @@
     color: #CCCCCC;
     font-size: 50px;
     text-align: center;
+    align-content: center;
   }
   #statsPoints {
     display: flex;
