@@ -63,8 +63,9 @@
     height: 70px;  
     border-radius: 10px;
     color: #CCCCCC;
+    display: flex;
     font-size: 50px;
-    text-align: center;
+    justify-content:center ;
     align-content: center;
   }
   #statsPoints {

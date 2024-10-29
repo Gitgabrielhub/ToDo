@@ -9,10 +9,15 @@ import { TimerComponent } from './componentes/timer/timer.component';
 
 const routes: Routes = [
   {
-    path:'todo', component:TodoComponent
+    path:'todo', component:TodoComponent,
+    children:[
+      {
+        path: 'lixeira', component:LixeiraComponent
+      },
+    ]
   },
   {
-    path: 'lixeira', component:LixeiraComponent
+    path:'', component:TodoComponent, 
   },
   {
     path:'timer', component:TimerComponent

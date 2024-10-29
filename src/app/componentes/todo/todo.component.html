@@ -23,16 +23,23 @@
        </div>
     </div>
     <div class="row">
-      <div class="col-3">
+      <div class="col-6">
         <button class="lixeira" [routerLink]="['/lixeira']">
           <img src="../../../assets/delete_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="">
         </button>
       </div>
-      <div class="col-9 text-end">
+      <div class="col-6 text-end">
         
-          <button class="btn  dropdown-toggle" type="button" aria-expanded="false">
-            <img src="../../../assets/menu_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+        <div class="dropdown">
+          <button (click)="showOptions($event)" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" >
+            More Options
           </button>
+          <ul class="dropdown-menu">
+            <li><button class="dropdown-item" type="button">List ToDos</button></li>
+            <li><button class="dropdown-item" type="button">Another action</button></li>
+            <li><button class="dropdown-item" type="button">Something else here</button></li>
+          </ul>
+        </div>
 
       </div>
     </div>

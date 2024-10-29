@@ -8,40 +8,34 @@ import { interval,Subscription } from 'rxjs';
   styleUrls: ['./timer.component.css']
 })
 export class TimerComponent implements OnInit {
-    public seconds:number = 0;
-    public minutes:any = 0;
-    private subscription!: Subscription;
-    public runningTime: boolean = false;
+  seconds:number = 0;
+  minutes:any = 0;
+  runningTime: boolean = false;
+  numberzero = 0;
 
-    start(){
-      if(!this.runningTime){
-        const timer = interval(1000);
-        this.subscription = timer.subscribe(()=>{
-          this.converterSegundoParaMin()
-          this.seconds++;
-        })
-        this.runningTime = true;
-      }
-    }
-    async converterSegundoParaMin(){
-      if(this.seconds === 60){
-        const min = interval(60000);
-        
-        this.subscription = min.subscribe(()=>{
-          this.minutes++;
-        })
-      }
+  iniciar(){
+      setInterval(()=>{
+        this.runningTime = true
+        this.seconds++;
+        if(this.seconds === 60){
+          this.minutes++
+          this.seconds = 0;
+        }
+      },1000)
+  }
+  pausar(){
 
+    if(this.runningTime){
+      clearInterval(this.minutes)
+      this.runningTime;
     }
-    pause(){
-      this.subscription? this.subscription.unsubscribe(): 
-      this.runningTime = false;
-    }
-    
-    clear(){
-      this.pause();
-      this.seconds = 0;
-    }
+  }
+  clear(){
+    this.seconds = 0;
+    this.minutes = 0;
+    this.runningTime = false;
+  }
+  
 
   constructor() { }
 

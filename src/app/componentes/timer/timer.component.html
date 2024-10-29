@@ -6,20 +6,22 @@
     </div>
     <div class="row" id="statRow">
       <div class="col-5" id="stats">
+        <h1 *ngIf="minutes < 10 " >{{ numberzero }}</h1>
         <h1>{{ minutes }}</h1>
       </div>
       <div  id="statsPoints">
         <div id="pontos">:</div>
       </div>
       <div class="col-5" id="stats">
+        <h1 *ngIf="seconds < 10 " >{{numberzero}}</h1>
         <h1>{{seconds}}</h1>
         
       </div>
     </div>
     <div class="container">
       <div class="row" id="btns">
-        <button (click)="start()" class="btn btn-success btn-lg" id="start">start</button>
-        <button (click)="pause()" class="btn btn-danger btn-lg" id="stop">stop</button>
+        <button (click)="iniciar()" class="btn btn-success btn-lg" id="start">start</button>
+        <button (click)="pausar()" class="btn btn-danger btn-lg" id="stop">stop</button>
         <button (click)="clear()" class="btn btn-default btn-lg" id="clear">clear</button>
       </div>
     </div>

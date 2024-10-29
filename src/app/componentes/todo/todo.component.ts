@@ -77,11 +77,11 @@ export class TodoComponent implements OnInit {
         }
       }) 
       this.save();
-
-
-      
-  
     
+  }
+  showOptions(event: Event){
+    const target = event.target as HTMLButtonElement;
+    console.log('valor do botao:: ', target.value)
   }
   sendoFeitas(item:Todo){
     
