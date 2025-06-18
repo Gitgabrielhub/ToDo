@@ -7,6 +7,8 @@ import { TodoComponent } from './componentes/todo/todo.component';
 import { FormsModule,  } from '@angular/forms';
 import { LixeiraComponent } from './componentes/lixeira/lixeira.component';
 import { DashComponent } from './componentes/dash/dash.component';
+import { CardsComponent } from './componentes/cards/cards.component';
+import { NavBarComponent } from './componentes/nav-bar/nav-bar.component';
 
 
 
@@ -17,7 +19,9 @@ import { DashComponent } from './componentes/dash/dash.component';
     AppComponent,
     TodoComponent,
     LixeiraComponent,
-    DashComponent
+    DashComponent,
+    CardsComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,

@@ -19,25 +19,23 @@ export class TodoComponent implements OnInit {
   titulo:string = '';
   done:boolean = false;
   descricaco:string = '';
-
-
-  constructor(private serviceLixeira: ServiceService) {}
   
+  constructor(private serviceLixeira: ServiceService) {}
   ngOnInit(): void {
+    this.timer()
   }
 
   timer(){
     const time = new Date()
-    console.log(`${time.getHours()}:${time.getMinutes()}:${time.getSeconds()}`)
+    console.log(time)
   }
-  
   excluir(item:Todo){
     const index = this.todos.indexOf(item);
     if(index !== -1){
       this.todos.splice(index,1);
       this.lixeira.push(item);
       this.serviceLixeira.pegarDado(this.lixeira)
-      /* console.log(this.lixeira) */
+      console.log(this.lixeira) 
     }
 
   }
@@ -65,7 +63,6 @@ export class TodoComponent implements OnInit {
     }
   }
   inserirTarefa(){
-    
       this.todos.push(new Todo(this.id,this.titulo,this.done,this.descricaco));
       this.titulo = '';
       this.id= this.id += 1;
@@ -77,35 +74,23 @@ export class TodoComponent implements OnInit {
         }
       }) 
       this.save();
-
-
-      
-  
-    
   }
   sendoFeitas(item:Todo){
-    
     const index = this.todos.indexOf(item);
-
     if(index !== -1){
       this.todos.splice(index,1);
       this.tarefasFazendo.push(item);
       console.log(this.tarefasFazendo)
     }
     this.timer();
-    
   }
-
   save(){
     const data = JSON.stringify(this.todos)
     localStorage.setItem('todos', data)
   }
-
   /* load(){
     const data = localStorage.getItem();
     this.todos = JSON.parse(data);
   }  */
   
-
-
 }

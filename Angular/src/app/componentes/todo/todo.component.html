@@ -1,10 +1,5 @@
-<div class="conteiner">
-  <div class="container nav-bar" >
-    <div class="row">
-        <div class="col-12 ">
-            <h1 class="text-center">ToDo</h1>
-        </div>
-    </div>
+<div class="container">
+  <app-nav-bar></app-nav-bar>
 </div>
 <!-- form -->
 <div class="container mt-5">
@@ -19,31 +14,17 @@
           </form>
        </div>
     </div>
-    <div class="row">
-      <div class="col-3">
-        <button class="lixeira" [routerLink]="['/lixeira']">
-          <img src="../../../assets/delete_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="">
-        </button>
-      </div>
-      <div class="col-9 text-end">
-        
-          <button class="btn  dropdown-toggle" type="button" aria-expanded="false">
-            <img src="../../../assets/menu_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="">
-          </button>
-
-      </div>
-    </div>
+    
 </div>
-<!-- inicio dos campos do cambam -->
+<!-- inicio dos campos do kambam -->
 <div class="container mt-5 background-containerToDo">
     <div class="row justify-content-center">
         <div class=" col-sm-4 col-md-6 col-lg-3 col-xl-3 col-xxl-3 pt-5">
             <h2 class="text-center">To Do</h2>
           
            <div *ngFor="let item of todos" class="card text-bg-secondary mb-3" style="max-width: 30rem">
-           <div class="card-header">
+            <div class="card-header">
              <h3 class="card-title">{{item.id}}. {{ item.titulo }}</h3>
-      
             </div>
             <div class="card-body">
               <p class="card-text">
@@ -55,7 +36,7 @@
               <button style="margin-left: 3px;" class="btn btn-primary" (click)="sendoFeitas(item)">Iniciar</button>
               
             </div>
-          </div>
+           </div>
         </div>
         <div class="col-sm-4 col-md-6 col-lg-3 col-xl-3 col-xxl-3 pt-5">
             <h2 class="text-center">Doing</h2>
@@ -143,4 +124,4 @@
         
     </div>
 </div>
-</div>
+

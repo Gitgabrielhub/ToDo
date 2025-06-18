@@ -1,11 +1,7 @@
 imput{
     border-color:black ;
 }
-.nav-bar{
-    background-color: #3c0087;
-    color: aliceblue;
-    border-radius: 0 0 10px 10px;
-}
+
 
 .campo{
 
@@ -52,8 +48,8 @@ input::placeholder{
 }
 .background-containerToDo{
     border-radius: 10px 10px 0 0 ;
-    background-color: #3c0087;
-    color: #fff;
+    
+    color:black;
     height: 100%;
 }
 .lixeira{
