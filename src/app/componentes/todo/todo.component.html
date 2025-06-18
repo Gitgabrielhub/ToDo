@@ -1,0 +1,127 @@
+<div class="container">
+  <app-nav-bar></app-nav-bar>
+</div>
+<!-- form -->
+<div class="container mt-5">
+    <div class="row justify-content-center mt-5">
+       <div class=" col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+          <form (ngSubmit)="inserirTarefa()">
+              <div class="mb-3">
+                  <input placeholder="insira uma tarefa" class="form-control" type="text" name="titulo" id="titulo" [(ngModel)]="titulo" >
+                  <input placeholder="Descrição da atividade" class="form-control" type="text" name="descricao" id="descricaco" [(ngModel)]="descricaco">
+                </div>
+                <button class="butt" type="submit" class="btn btn-success" [disabled]="titulo === ''">Inserir tarefa</button>
+          </form>
+       </div>
+    </div>
+    
+</div>
+<!-- inicio dos campos do kambam -->
+<div class="container mt-5 background-containerToDo">
+    <div class="row justify-content-center">
+        <div class=" col-sm-4 col-md-6 col-lg-3 col-xl-3 col-xxl-3 pt-5">
+            <h2 class="text-center">To Do</h2>
+          
+           <div *ngFor="let item of todos" class="card text-bg-secondary mb-3" style="max-width: 30rem">
+            <div class="card-header">
+             <h3 class="card-title">{{item.id}}. {{ item.titulo }}</h3>
+            </div>
+            <div class="card-body">
+              <p class="card-text">
+                {{item.descricaco}}
+              </p>
+            </div>
+            <div class="d-flex">
+              <button  class="btn btn-danger" (click)="excluir(item)">Excluir</button>
+              <button style="margin-left: 3px;" class="btn btn-primary" (click)="sendoFeitas(item)">Iniciar</button>
+              
+            </div>
+           </div>
+        </div>
+        <div class="col-sm-4 col-md-6 col-lg-3 col-xl-3 col-xxl-3 pt-5">
+            <h2 class="text-center">Doing</h2>
+            <!-- <h4 *ngFor="let item of tarefasFazendo" class="mt-5">{{ item.id }}. {{ item.titulo  }} <button style="margin-left: 3px;" class="btn btn-warning" (click)="finalizarTarefa(item)">FINALIZAR TAREFA</button> </h4> -->
+             
+            <div *ngFor="let item of tarefasFazendo" class="card text-bg-danger mb-3" style="max-width: 30rem">
+              <div class="card-header">
+                <h3 class="card-title">{{item.id}}. {{ item.titulo }}</h3>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">{{item.id}}. {{ item.titulo }}</h5>
+                <p class="card-text">
+                  {{item.descricaco}}
+                </p>
+              </div>
+              <div class="d-flex">
+                <button style="margin-left: 3px;" class="btn btn-warning" (click)="finalizarTarefa(item)">FINALIZAR TAREFA</button>
+              </div>
+            </div>
+
+
+
+        </div>
+        <div class=" col-sm-4 col-md-6 col-lg-3 col-xl-3 col-xxl-3 pt-5">
+            <h2 class="text-center">Done</h2>
+            
+
+            <div *ngFor="let item of tarefasFinalizadas"  class="card text-bg-primary mb-3" style="max-width: 30rem">
+              <div class="card-header">
+                <div class="row">
+                  <div class="col-2">
+                    <img src="../../../assets/check_small_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-10 col-xl-10 col-xxl-10">
+                    <h3 class="card-title">{{item.id}}. {{ item.titulo }}</h3>
+                  </div>
+                </div>
+      
+              </div>
+              <div class="card-body">
+                <p class="card-text">
+                  {{item.descricaco}}
+                </p>
+              </div>
+              <div class="d-flex">
+                <div class="modal fade" id="exampleModalToggle" aria-labelledby="exampleModalToggleLabel" tabindex="-1" aria-hidden="true" style="display: none;">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Parabens!! <img style="height: 18px; width: 18px;" src="../../../assets/fireworks.png" alt=""> <br> Sua tarefa foi finalizada com sucesso <img src="" alt=""></h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        Show a second modal and hide this one with the button below.
+                      </div>
+                      <div class="modal-footer">
+                        <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Open second modal</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        Hide this modal and show the first with the button below.
+                      </div>
+                      <div class="modal-footer">
+                        <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to first</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn btn-success" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"><img src="../../../assets/check_small_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                  Finalizada</button> 
+              </div>
+            </div>
+
+
+        </div>
+        
+    </div>
+</div>
+
