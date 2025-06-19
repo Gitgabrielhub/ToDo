@@ -4,20 +4,20 @@
 <!-- form -->
 <div class="container mt-5">
     <div class="row justify-content-center mt-5">
-       <div class=" col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
-          <form (ngSubmit)="inserirTarefa()">
-              <div class="mb-3">
-                  <input placeholder="insira uma tarefa" class="form-control" type="text" name="titulo" id="titulo" [(ngModel)]="titulo" >
-                  <input placeholder="Descrição da atividade" class="form-control" type="text" name="descricao" id="descricaco" [(ngModel)]="descricaco">
-                </div>
-                <button class="butt" type="submit" class="btn btn-success" [disabled]="titulo === ''">Inserir tarefa</button>
+        <div class=" col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4  ">
+          <form class="text-center" (ngSubmit)="inserirTarefa()">
+            <input placeholder="insira uma tarefa" class="form-control" type="text" name="titulo" id="titulo" [(ngModel)]="titulo" >
+            <input placeholder="Descrição da atividade" class="form-control" type="text" name="descricao" id="descricaco" [(ngModel)]="descricaco">
+            
           </form>
-       </div>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center mt-3">
+          <button class="" type="submit" class="btn btn-success" [disabled]="titulo === '' ">Inserir tarefa</button>
+        </div>
     </div>
-    
 </div>
 <!-- inicio dos campos do kambam -->
-<div class="container mt-5 background-containerToDo">
+<div class="container mt-3 background-containerToDo">
     <div class="row justify-content-center">
         <div class=" col-sm-4 col-md-6 col-lg-3 col-xl-3 col-xxl-3 pt-5">
             <h2 class="text-center">To Do</h2>
@@ -118,10 +118,7 @@
                   Finalizada</button> 
               </div>
             </div>
-
-
         </div>
-        
     </div>
 </div>
 
