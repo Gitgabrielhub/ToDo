@@ -6,13 +6,18 @@
     <div class="row justify-content-center mt-5">
         <div class=" col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4  ">
           <form class="text-center" (ngSubmit)="inserirTarefa()">
-            <input placeholder="insira uma tarefa" class="form-control" type="text" name="titulo" id="titulo" [(ngModel)]="titulo" >
-            <input placeholder="Descrição da atividade" class="form-control" type="text" name="descricao" id="descricaco" [(ngModel)]="descricaco">
-            
+            <div class="row ">
+              <div class="col-sm-12 col-md-6 col-lg-12 col-xl-12 col-xxl-12">
+                <input placeholder="Insira seu nome" class="form-control" type="text" name="nome" id="nome" [(ngModel)]="nome" >
+                <input placeholder="Insira uma tarefa" class="form-control" type="text" name="titulo" id="titulo" [(ngModel)]="titulo" >
+                <input placeholder="Descrição da atividade" class="form-control" type="text" name="descricao" id="descricaco" [(ngModel)]="descricaco">
+                <input placeholder="Insira a data de atendimento" class="form-control" type="date" name="dataAtendimento" id="dataAtendimento" [(ngModel)]="dataAtendimento" >
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-12 col-xl-12 col-xxl-12 mt-3">
+                 <button class="text-center" type="submit" class="btn btn-success" [disabled]="titulo === '' ">Inserir tarefa</button>
+              </div>
+            </div>
           </form>
-        </div>
-        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center mt-3">
-          <button class="" type="submit" class="btn btn-success" [disabled]="titulo === '' ">Inserir tarefa</button>
         </div>
     </div>
 </div>
@@ -24,7 +29,8 @@
           
            <div *ngFor="let item of todos" class="card text-bg-secondary mb-3" style="max-width: 30rem">
             <div class="card-header">
-             <h3 class="card-title">{{item.id}}. {{ item.titulo }}</h3>
+              <h5 class="card-title">Nome: {{item.nome}}</h5>
+              <h5 class="card-title">{{item.id}}. {{ item.titulo }}</h5>
             </div>
             <div class="card-body">
               <p class="card-text">
@@ -44,7 +50,8 @@
              
             <div *ngFor="let item of tarefasFazendo" class="card text-bg-danger mb-3" style="max-width: 30rem">
               <div class="card-header">
-                <h3 class="card-title">{{item.id}}. {{ item.titulo }}</h3>
+                <h5 class="card-title">Nome: {{item.nome}}</h5>
+                <h5 class="card-title">{{item.id}}. {{ item.titulo }}</h5>
               </div>
               <div class="card-body">
                 <h5 class="card-title">{{item.id}}. {{ item.titulo }}</h5>
@@ -71,7 +78,8 @@
                     <img src="../../../assets/check_small_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="">
                   </div>
                   <div class="col-sm-12 col-md-6 col-lg-10 col-xl-10 col-xxl-10">
-                    <h3 class="card-title">{{item.id}}. {{ item.titulo }}</h3>
+                    <h5 class="card-title">Nome: {{item.nome}}</h5>
+                    <h5 class="card-title">{{item.id}}. {{ item.titulo }}</h5>
                   </div>
                 </div>
       

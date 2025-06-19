@@ -17,17 +17,19 @@ export class TodoComponent implements OnInit {
   public campoVazio:boolean = false; 
   id:number = 1;
   titulo:string = '';
+  nome:string = '';
   done:boolean = false;
   descricaco:string = '';
+  dataAtendimento:Date = new Date;
   
   constructor(private serviceLixeira: ServiceService) {}
   ngOnInit(): void {
-    this.timer()
+    this.timer();
   }
 
   timer(){
     const time = new Date()
-    console.log(time)
+    console.log(this.dataAtendimento)
   }
   excluir(item:Todo){
     const index = this.todos.indexOf(item);
@@ -63,7 +65,8 @@ export class TodoComponent implements OnInit {
     }
   }
   inserirTarefa(){
-      this.todos.push(new Todo(this.id,this.titulo,this.done,this.descricaco));
+      this.todos.push(new Todo(this.id,this.nome,this.titulo,this.done,this.descricaco));
+      this.nome = '';
       this.titulo = '';
       this.id= this.id += 1;
       this.descricaco = '';
