@@ -1,7 +1,15 @@
 imput{
     border-color:black ;
 }
+<<<<<<< HEAD
 
+=======
+.nav-bar{
+    background-color: #3c0087;
+    color: aliceblue;
+    border-radius: 0 0 10px 10px;
+}
+>>>>>>> 78d7bfa84b827cb0d46778f7d5d4aac05f551299
 
 .campo{
 
@@ -29,6 +37,7 @@ ul li a{
 }
 input{
     margin-top: 0.6rem;
+<<<<<<< HEAD
     border: 0.5px solid black;
     width: 21rem;
     height: 2.5rem;
@@ -36,6 +45,15 @@ input{
 
 input::placeholder{
     font-size: 1rem;
+=======
+    border: 1px solid black;
+    width: 30rem;
+    height: 3.5rem;
+}
+
+input::placeholder{
+    font-size: 2rem;
+>>>>>>> 78d7bfa84b827cb0d46778f7d5d4aac05f551299
     text-align: center;
 
 }
@@ -48,8 +66,13 @@ input::placeholder{
 }
 .background-containerToDo{
     border-radius: 10px 10px 0 0 ;
+<<<<<<< HEAD
     
     color:black;
+=======
+    background-color: #3c0087;
+    color: #fff;
+>>>>>>> 78d7bfa84b827cb0d46778f7d5d4aac05f551299
     height: 100%;
 }
 .lixeira{

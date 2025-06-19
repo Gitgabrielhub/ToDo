@@ -1,9 +1,23 @@
+<<<<<<< HEAD
 <div class="container">
   <app-nav-bar></app-nav-bar>
+=======
+<div class="conteiner">
+  <div class="container nav-bar" >
+    <div class="row">
+        <div class="col-12 ">
+            <h1 class="text-center">ToDo</h1>
+        </div>
+    </div>
+</div>
+<div class="container mt-5">
+  <app-timer></app-timer>
+>>>>>>> 78d7bfa84b827cb0d46778f7d5d4aac05f551299
 </div>
 <!-- form -->
 <div class="container mt-5">
     <div class="row justify-content-center mt-5">
+<<<<<<< HEAD
         <div class=" col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4  ">
           <form class="text-center" (ngSubmit)="inserirTarefa()">
             <div class="row ">
@@ -23,14 +37,56 @@
 </div>
 <!-- inicio dos campos do kambam -->
 <div class="container mt-3 background-containerToDo">
+=======
+       <div class=" col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+          <form (ngSubmit)="inserirTarefa()">
+              <div class="mb-3">
+                  <input placeholder="insira uma tarefa" class="form-control" type="text" name="titulo" id="titulo" [(ngModel)]="titulo" >
+                  <input placeholder="Descrição da atividade" class="form-control" type="text" name="descricao" id="descricaco" [(ngModel)]="descricaco">
+                </div>
+                <button class="butt" type="submit" class="btn btn-success" [disabled]="titulo === ''">Inserir tarefa</button>
+          </form>
+       </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <button class="lixeira" [routerLink]="['/lixeira']">
+          <img src="../../../assets/delete_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+        </button>
+      </div>
+      <div class="col-6 text-end">
+        
+        <div class="dropdown">
+          <button (click)="showOptions($event)" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" >
+            More Options
+          </button>
+          <ul class="dropdown-menu">
+            <li><button class="dropdown-item" type="button">List ToDos</button></li>
+            <li><button class="dropdown-item" type="button">Another action</button></li>
+            <li><button class="dropdown-item" type="button">Something else here</button></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+</div>
+<!-- inicio dos campos do cambam -->
+<div class="container mt-5 background-containerToDo">
+>>>>>>> 78d7bfa84b827cb0d46778f7d5d4aac05f551299
     <div class="row justify-content-center">
         <div class=" col-sm-4 col-md-6 col-lg-3 col-xl-3 col-xxl-3 pt-5">
             <h2 class="text-center">To Do</h2>
           
            <div *ngFor="let item of todos" class="card text-bg-secondary mb-3" style="max-width: 30rem">
+<<<<<<< HEAD
             <div class="card-header">
               <h5 class="card-title">Nome: {{item.nome}}</h5>
               <h5 class="card-title">{{item.id}}. {{ item.titulo }}</h5>
+=======
+           <div class="card-header">
+             <h3 class="card-title">{{item.id}}. {{ item.titulo }}</h3>
+      
+>>>>>>> 78d7bfa84b827cb0d46778f7d5d4aac05f551299
             </div>
             <div class="card-body">
               <p class="card-text">
@@ -42,7 +98,11 @@
               <button style="margin-left: 3px;" class="btn btn-primary" (click)="sendoFeitas(item)">Iniciar</button>
               
             </div>
+<<<<<<< HEAD
            </div>
+=======
+          </div>
+>>>>>>> 78d7bfa84b827cb0d46778f7d5d4aac05f551299
         </div>
         <div class="col-sm-4 col-md-6 col-lg-3 col-xl-3 col-xxl-3 pt-5">
             <h2 class="text-center">Doing</h2>
@@ -50,8 +110,12 @@
              
             <div *ngFor="let item of tarefasFazendo" class="card text-bg-danger mb-3" style="max-width: 30rem">
               <div class="card-header">
+<<<<<<< HEAD
                 <h5 class="card-title">Nome: {{item.nome}}</h5>
                 <h5 class="card-title">{{item.id}}. {{ item.titulo }}</h5>
+=======
+                <h3 class="card-title">{{item.id}}. {{ item.titulo }}</h3>
+>>>>>>> 78d7bfa84b827cb0d46778f7d5d4aac05f551299
               </div>
               <div class="card-body">
                 <h5 class="card-title">{{item.id}}. {{ item.titulo }}</h5>
@@ -78,8 +142,12 @@
                     <img src="../../../assets/check_small_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="">
                   </div>
                   <div class="col-sm-12 col-md-6 col-lg-10 col-xl-10 col-xxl-10">
+<<<<<<< HEAD
                     <h5 class="card-title">Nome: {{item.nome}}</h5>
                     <h5 class="card-title">{{item.id}}. {{ item.titulo }}</h5>
+=======
+                    <h3 class="card-title">{{item.id}}. {{ item.titulo }}</h3>
+>>>>>>> 78d7bfa84b827cb0d46778f7d5d4aac05f551299
                   </div>
                 </div>
       
@@ -126,7 +194,17 @@
                   Finalizada</button> 
               </div>
             </div>
+<<<<<<< HEAD
         </div>
     </div>
 </div>
 
+=======
+
+
+        </div>
+        
+    </div>
+</div>
+</div>
+>>>>>>> 78d7bfa84b827cb0d46778f7d5d4aac05f551299
