@@ -1,9 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
 import { Todo } from './models/todo.model';
-=======
-import { Todo } from '../../models/todo.model';
->>>>>>> 78d7bfa84b827cb0d46778f7d5d4aac05f551299
 import { ServiceService } from 'src/app/service.service';
 
 
@@ -20,48 +16,28 @@ export class TodoComponent implements OnInit {
   public tarefasFazendo:Todo[]=[];
   public campoVazio:boolean = false; 
   id:number = 1;
-  titulo:string = '';
-<<<<<<< HEAD
   nome:string = '';
+  titulo:string = '';
   done:boolean = false;
   descricaco:string = '';
-  dataAtendimento:Date = new Date;
+  dataAtendimento:string = ''
   
   constructor(private serviceLixeira: ServiceService) {}
   ngOnInit(): void {
-    this.timer();
-=======
-  done:boolean = false;
-  descricaco:string = '';
-
-
-  constructor(private serviceLixeira: ServiceService) {}
-  
-  ngOnInit(): void {
->>>>>>> 78d7bfa84b827cb0d46778f7d5d4aac05f551299
+    this.timer()
   }
 
   timer(){
     const time = new Date()
-<<<<<<< HEAD
-    console.log(this.dataAtendimento)
+    console.log(time)
   }
-=======
-    console.log(`${time.getHours()}:${time.getMinutes()}:${time.getSeconds()}`)
-  }
-  
->>>>>>> 78d7bfa84b827cb0d46778f7d5d4aac05f551299
   excluir(item:Todo){
     const index = this.todos.indexOf(item);
     if(index !== -1){
       this.todos.splice(index,1);
       this.lixeira.push(item);
       this.serviceLixeira.pegarDado(this.lixeira)
-<<<<<<< HEAD
       console.log(this.lixeira) 
-=======
-      /* console.log(this.lixeira) */
->>>>>>> 78d7bfa84b827cb0d46778f7d5d4aac05f551299
     }
 
   }
@@ -89,13 +65,7 @@ export class TodoComponent implements OnInit {
     }
   }
   inserirTarefa(){
-<<<<<<< HEAD
-      this.todos.push(new Todo(this.id,this.nome,this.titulo,this.done,this.descricaco));
-      this.nome = '';
-=======
-    
-      this.todos.push(new Todo(this.id,this.titulo,this.done,this.descricaco));
->>>>>>> 78d7bfa84b827cb0d46778f7d5d4aac05f551299
+      this.todos.push(new Todo(this.id,this.nome, this.titulo,this.done,this.descricaco));
       this.titulo = '';
       this.id= this.id += 1;
       this.descricaco = '';
@@ -106,51 +76,23 @@ export class TodoComponent implements OnInit {
         }
       }) 
       this.save();
-<<<<<<< HEAD
   }
   sendoFeitas(item:Todo){
     const index = this.todos.indexOf(item);
-=======
-    
-  }
-  showOptions(event: Event){
-    const target = event.target as HTMLButtonElement;
-    console.log('valor do botao:: ', target.value)
-  }
-  sendoFeitas(item:Todo){
-    
-    const index = this.todos.indexOf(item);
-
->>>>>>> 78d7bfa84b827cb0d46778f7d5d4aac05f551299
     if(index !== -1){
       this.todos.splice(index,1);
       this.tarefasFazendo.push(item);
       console.log(this.tarefasFazendo)
     }
     this.timer();
-<<<<<<< HEAD
   }
-=======
-    
-  }
-
->>>>>>> 78d7bfa84b827cb0d46778f7d5d4aac05f551299
   save(){
     const data = JSON.stringify(this.todos)
     localStorage.setItem('todos', data)
   }
-<<<<<<< HEAD
-=======
-
->>>>>>> 78d7bfa84b827cb0d46778f7d5d4aac05f551299
   /* load(){
     const data = localStorage.getItem();
     this.todos = JSON.parse(data);
   }  */
   
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 78d7bfa84b827cb0d46778f7d5d4aac05f551299
 }
