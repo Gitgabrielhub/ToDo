@@ -15,6 +15,7 @@ export class TodoComponent implements OnInit {
   public tarefasFinalizadas:Todo[]=[];
   public tarefasFazendo:Todo[]=[];
   public campoVazio:boolean = false; 
+  
   id:number = 1;
   nome:string = '';
   titulo:string = '';
@@ -89,10 +90,5 @@ export class TodoComponent implements OnInit {
   save(){
     const data = JSON.stringify(this.todos)
     localStorage.setItem('todos', data)
-  }
-  /* load(){
-    const data = localStorage.getItem();
-    this.todos = JSON.parse(data);
-  }  */
-  
+  } 
 }
