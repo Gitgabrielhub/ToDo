@@ -11,6 +11,7 @@ import { CardsComponent } from './componentes/cards/cards.component';
 import { NavBarComponent } from './componentes/nav-bar/nav-bar.component';
 
 import { TimerComponent } from './componentes/timer/timer.component';
+import { FooterComponent } from './componentes/footer/footer.component';
 
 
 
@@ -25,7 +26,8 @@ import { TimerComponent } from './componentes/timer/timer.component';
     DashComponent,
     CardsComponent,
     NavBarComponent,
-    TimerComponent
+    TimerComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

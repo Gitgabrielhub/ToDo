@@ -1,0 +1,9 @@
+*{
+    background:#252420;
+    color: white;
+}
+#logo{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 10%;
+}
