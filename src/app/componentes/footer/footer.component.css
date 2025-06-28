@@ -1,7 +1,24 @@
 *{
-    background-color: #525252;
+    background: #525252;
     color: white;
 }
-button{
-        
+.letras{
+    font-size: 20px;
+    text-align: justify;
 }
+.containerMenor{
+    width: 12rem;
+    height: 10rem;
+}
+.colorir{
+    text-align: justify;
+}
+button{
+       background-color: #FD9302; 
+       list-style: none;
+       border: none;
+       border-radius:5px;
+       height: 2rem;
+       width: 10rem;
+}
+
