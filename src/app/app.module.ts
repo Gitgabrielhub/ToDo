@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,7 @@ import { NavBarComponent } from './componentes/nav-bar/nav-bar.component';
 
 import { TimerComponent } from './componentes/timer/timer.component';
 import { FooterComponent } from './componentes/footer/footer.component';
+import { HomePageComponent } from './componentes/home-page/home-page.component';
 
 
 
@@ -27,16 +29,20 @@ import { FooterComponent } from './componentes/footer/footer.component';
     CardsComponent,
     NavBarComponent,
     TimerComponent,
-    FooterComponent
+    FooterComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    RouterModule,
+    
     
     
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+ }

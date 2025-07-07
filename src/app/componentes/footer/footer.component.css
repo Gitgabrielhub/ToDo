@@ -13,12 +13,17 @@
 .colorir{
     text-align: justify;
 }
-button{
-       background-color: #FD9302; 
-       list-style: none;
-       border: none;
-       border-radius:5px;
-       height: 2rem;
-       width: 10rem;
+.imgWhats{
+    background-color: #FD9302;
+    
 }
+button{
+    background-color: #FD9302; 
+    list-style: none;
+    border: none;
+    border-radius:5px;
+    height: 2rem;
+    width: 10rem;
+}
+
 

@@ -5,14 +5,13 @@ import { LixeiraComponent } from './componentes/lixeira/lixeira.component';
 import { DashComponent } from './componentes/dash/dash.component';
 import { TodoComponent } from './componentes/todo/todo.component';
 import { TimerComponent } from './componentes/timer/timer.component';
-
+import { HomePageComponent } from './componentes/home-page/home-page.component';
 
 
 
 
 const routes: Routes = [
   {
-
     path:'todo', component:TodoComponent
   },
   {
@@ -29,6 +28,9 @@ const routes: Routes = [
   },
   {
     path:'timer', component:TimerComponent
+  },
+  {
+    path:'home', component:HomePageComponent
 
   }
 ];
