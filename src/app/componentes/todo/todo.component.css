@@ -1,7 +1,4 @@
-*{
-    background:#252420;
-    
-}
+
 imput{
     border-color:black ;
 }
@@ -23,6 +20,20 @@ ul li{
     list-style: none;
     padding-top: 1rem;
 }
+
+.modal-content{
+    border: 0.3px solid #a6acaf;
+    margin: 1rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+.modal-footer{
+    gap: 1rem;
+}
+.modal-body{
+    display: flex;
+    justify-content: center;
+}
 ul li a{
     text-decoration: none;
     color:#fff;
@@ -39,7 +50,6 @@ input{
 }
 input::placeholder{
     font-size: 1rem;
-    text-align: center;
     width: 30rem;
     height: 3.5rem;
 }

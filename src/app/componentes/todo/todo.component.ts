@@ -15,6 +15,7 @@ export class TodoComponent implements OnInit {
   public tarefasFinalizadas:Todo[]=[];
   public tarefasFazendo:Todo[]=[];
   public campoVazio:boolean = false; 
+  public editCard: boolean = false;
   
   id:number = 1;
   nome:string = '';
@@ -86,6 +87,10 @@ export class TodoComponent implements OnInit {
       console.log(this.tarefasFazendo)
     }
     this.timer();
+  }
+  editarCard(){
+    this.editCard = true;
+    
   }
   save(){
     const data = JSON.stringify(this.todos)
