@@ -11,7 +11,7 @@
                 <input placeholder="Insira seu nome" class="form-control" type="text" name="nome" id="nome" [(ngModel)]="nome" >
                 <input placeholder="Insira uma tarefa" class="form-control" type="text" name="titulo" id="titulo" [(ngModel)]="titulo" >
                 <input placeholder="Descrição da atividade" class="form-control" type="text" name="descricao" id="descricaco" [(ngModel)]="descricaco">
-                <input placeholder="Insira a data de atendimento" class="form-control" type="date" name="dataAtendimento" [(ngModel)]="dataAtendimento" >
+                <input data-format="00/00/0000" placeholder="Insira a data de atendimento" class="form-control" type="date" name="dataAtendimento" [(ngModel)]="dataAtendimento" >
               </div>
               <div class="col-sm-12 col-md-6 col-lg-12 col-xl-12 col-xxl-12 mt-3">
                  <button class="text-center" type="submit" class="btn btn-success" [disabled]="titulo === '' ">Inserir serviço</button>
@@ -90,7 +90,8 @@
             </div>
         </div>
     </div>
-    <div ngif="true" class="modal-lg" tabindex="-1">
+</div>
+<div *ngIf="!editCard "  class="modal-lg" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -114,7 +115,6 @@
       </div>
     </div>
   </div>
-</div>
 </div>
 
 <!-- 

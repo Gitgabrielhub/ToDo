@@ -26,13 +26,9 @@ export class TodoComponent implements OnInit {
   
   constructor(private serviceLixeira: ServiceService) {}
   ngOnInit(): void {
-    this.timer()
+    
   }
 
-  timer(){
-    const time = new Date()
-    console.log(time)
-  }
   excluir(item:Todo){
     const index = this.todos.indexOf(item);
     if(index !== -1){
@@ -43,6 +39,7 @@ export class TodoComponent implements OnInit {
     }
 
   }
+
   finalizarTarefa(item:Todo){
     const index = this.todos.indexOf(item);
     item.done = true;
@@ -72,12 +69,28 @@ export class TodoComponent implements OnInit {
       this.id= this.id += 1;
       this.descricaco = '';
       
+      
       this.todos.forEach(todo =>{
         if(todo.titulo === this.titulo && todo.id !== todo.id){
           alert('essa tarefa ja foi cadastrada')
         }
       }) 
       this.save();
+      
+      let data: string = JSON.stringify(this.dataAtendimento); 
+      console.log(data)
+      console.log(this.formatarDataBr(data))
+      
+  }
+  // tratamento da data.
+  formatarDataBr(data:string):string{
+    if(!/^\d{4}\/\d{2}\/\d{2}$/.test(data)){
+      return "data invalida";
+    }else{
+      const [ano, mes, dia] = data.split('-');
+      return `${dia}/${mes}/${ano}`
+    }
+   
   }
   sendoFeitas(item:Todo){
     const index = this.todos.indexOf(item);
@@ -86,12 +99,11 @@ export class TodoComponent implements OnInit {
       this.tarefasFazendo.push(item);
       console.log(this.tarefasFazendo)
     }
-    this.timer();
   }
   editarCard(){
-    this.editCard = true;
-    
+    this.editCard = !this.editCard;
   }
+  
   save(){
     const data = JSON.stringify(this.todos)
     localStorage.setItem('todos', data)
